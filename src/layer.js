@@ -982,8 +982,8 @@ layer.prompt = function(options, yes){
     style = 'style="width: '+ area[0] +'; height: '+ area[1] + ';"';
     delete options.area;
   }
-  var prompt, content = options.formType == 2 ? '<textarea class="layui-layer-input"' + style +'>' + (options.value||'') +'</textarea>' : function(){
-    return '<input type="'+ (options.formType == 1 ? 'password' : 'text') +'" class="layui-layer-input" value="'+ (options.value||'') +'">';
+  var prompt, content = options.formType == 2 ? '<textarea class="layui-layer-input"' + style +' placeholder="'+ (options.placeholder||'') +'">' + (options.value||'') +'</textarea>' : function(){
+    return '<input type="'+ (options.formType == 1 ? 'password' : 'text') +'" class="layui-layer-input" value="'+ (options.value||'') +'" placeholder="'+ (options.placeholder||'') +'">';
   }();
   
   var success = options.success;
